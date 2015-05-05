@@ -1,0 +1,147 @@
+@inject IOptions<AppSettings> AppSettings
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewBag.Title - @AppSettings.Options.SiteTitle</title>
+
+        <environment names="Development">
+            <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+            <link rel="stylesheet" href="~/lib/bootstrap-touch-carousel/css/bootstrap-touch-carousel.css" />
+            <link rel="stylesheet" href="~/Content/css/main.css" />
+            <!-- For third-generation iPad with high-resolution Retina display: -->
+            <link rel="apple-touch-icon-precomposed" sizes="144x144" href="@Url.Content("~/Content/images/apple-touch-icon-144x144.png")">
+            <!-- For iPhone with high-resolution Retina display: -->
+            <link rel="apple-touch-icon-precomposed" sizes="114x114" href="@Url.Content("~/Content/images/apple-touch-icon-114x114.png")">
+            <!-- For first- and second-generation iPad: -->
+            <link rel="apple-touch-icon-precomposed" sizes="72x72" href="@Url.Content("~/Content/images/apple-touch-icon-72x72.png")">
+            <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+            <link rel="apple-touch-icon-precomposed" href="@Url.Content("~/Content/images/apple-touch-icon-57x57.png")">
+        </environment>
+        <environment names="Staging,Production">
+            <link rel="stylesheet" href="//ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/css/bootstrap.min.css"
+                  asp-fallback-test-class="hidden" asp-fallback-test-property="visibility" asp-fallback-test-value="hidden" />
+            <link rel="stylesheet" href="//ajax.aspnetcdn.com/ajax/bootstrap-touch-carousel/0.8.0/css/bootstrap-touch-carousel.css"
+                  asp-fallback-href="~/lib/bootstrap-touch-carousel/css/bootstrap-touch-carousel.css"
+                  asp-fallback-test-class="carousel-caption" asp-fallback-test-property="display" asp-fallback-test-value="none" />
+            <link rel="stylesheet" href="~/Content/css/main.css" />
+            <!-- For third-generation iPad with high-resolution Retina display: -->
+            <link rel="apple-touch-icon-precomposed" sizes="144x144" href="@Url.Content("~/Content/images/apple-touch-icon-144x144.png")">
+            <!-- For iPhone with high-resolution Retina display: -->
+            <link rel="apple-touch-icon-precomposed" sizes="114x114" href="@Url.Content("~/Content/images/apple-touch-icon-114x114.png")">
+            <!-- For first- and second-generation iPad: -->
+            <link rel="apple-touch-icon-precomposed" sizes="72x72" href="@Url.Content("~/Content/images/apple-touch-icon-72x72.png")">
+            <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+            <link rel="apple-touch-icon-precomposed" href="@Url.Content("~/Content/images/apple-touch-icon-57x57.png")">
+        </environment>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="~/Content/images/opengraph-image.png">
+    </head>
+    <body>
+        <script type="text/javascript"> document.body.className = 'js-enabled ' + document.body.className;</script>
+
+        <div id="skiplink-container">
+            <div><a href="#content" class="skiplink">Skip to main content</a></div>
+        </div>
+
+        <div id="global-cookie-message">
+            <div class="outer-block">
+                <div class="inner-block">
+                    <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+                </div>
+            </div>
+        </div>
+        <!--end global-cookie-message-->
+
+        <div role="banner" id="global-header">
+            <div class="header-wrapper">
+                <div class="header-global">
+                    <div class="header-logo">
+                        <a href="/" title="Go to the homepage" id="logo" class="content"><img src="~/Content/images/moj_logo_horizontal_36x246.png" width="246" height="36" alt="Ministry of Justice"></a>
+                    </div>
+                    <div class="header-app-name">
+                        Integrated Fraud System
+                    </div>
+                    <div id="log-in-out">
+                    </div>          
+                </div>
+            </div>
+        </div>
+        <!-- </header> -->
+        <!--end header-->
+
+        <div id="global-header-bar">
+            <div class="inner-block">
+                <div class="header-bar"></div>
+            </div>
+        </div>
+        <!--end global-header-bar-->
+
+        <section id="main">
+            <div id="wrapper" class="">
+                <div id="content" role="main">
+                    <div class="inner-block">
+                        <div class="phase-banner">
+                            <p>
+                                <span>This is a new service - <a href="mailto:liveservices@digital.justice.gov.uk">your feedback</a> will help us to improve it.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="inner-block login-bar">
+                    </div>
+                    <div class="inner-block">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <ul class="nav">
+                                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                                    @*<li>@Html.ActionLink("Case list", "Index", "Cases", new { area = "" }, null)</li>*@
+                                    <li>@Html.ActionLink("Quick search", "Index", "QuickSearch", new { area = "" }, null)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        @RenderBody()
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </section>
+        <footer id="footer" class="group js-footer" role="contentinfo">
+            <div class="footer-wrapper">
+                <div class="footer-meta">
+                    <div class="footer-meta-inner"></div>
+                </div>
+            </div>
+        </footer>
+        <!--end footer-->
+        
+
+        <environment names="Development">
+            <script src="~/lib/jquery/jquery.js"></script>
+            <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+            <script src="~/lib/hammer.js/hammer.js"></script>
+            <script src="~/lib/bootstrap-touch-carousel/js/bootstrap-touch-carousel.js"></script>
+        </environment>
+        <environment names="Staging,Production">
+            <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-1.10.2.min.js"
+                    asp-fallback-src="~/lib/jquery/jquery.min.js"
+                    asp-fallback-test="window.jQuery">
+            </script>
+            <script src="//ajax.aspnetcdn.com/ajax/bootstrap/3.0.0/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery">
+            </script>
+            <script src="//ajax.aspnetcdn.com/ajax/hammer.js/2.0.4/hammer.min.js"
+                    asp-fallback-src="~/lib/hammer.js/hammer.js"
+                    asp-fallback-test="window.Hammer">
+            </script>
+            <script src="//ajax.aspnetcdn.com/ajax/bootstrap-touch-carousel/0.8.0/js/bootstrap-touch-carousel.js"
+                    asp-fallback-src="~/lib/bootstrap-touch-carousel/js/bootstrap-touch-carousel.js"
+                    asp-fallback-test="window.Zepto">
+            </script>
+        </environment>
+
+    </body>
+</html>

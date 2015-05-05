@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+legend { margin-left: -6px;}
+
+.form-control {  width: 50%; }
+/*input.form-control { margin-left: -15px; }*/
+
+#footer .footer-meta .copyright a { float: right; }
+
+div.form-group.block-label,
+div.form-group.block-label label  
+{
+    display: inline-block;
+    *zoom: 1;
+    display: inline;
+}

@@ -1,0 +1,9 @@
+﻿#content {max-width:100%;}
+.navbar {max-width:1024px; margin-left:auto; margin-right:auto;}
+#controls {margin:15px;}
+.button, .button-secondary {margin:15px 0;}
+.table-title {margin-top:15px;}
+.cms-report td:nth-child(even), .cms-report th:nth-child(even) {border-left:4px solid rgb(191,193,195);}
+.cms-report th:nth-child(odd) {padding-top:2em;}
+.cms-report td, .cms-report th {padding-left:0.5em;padding-right:0.5em;}
+.phase-banner {max-width:1024px;margin-left:auto;margin-right:auto;}

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+h1 {font-size:28px;}
+@media (max-width: 640px) {h1{font-size:24px;}}
+h2 {font-size:24px;}
+@media (max-width:640px) {h2{font-size:18px;}}
+h3 {font-size:18px;}
+@media (max-width:640px) {h3{font-size:14px;}}
+h4 {font-size:13px;}
+@media (max-width:640px) {h4{font-size:10px;}}
+
+#global-header .header-wrapper .header-global .header-app-name {width:auto;}
+
+.field-validation-error {color:#df3034;}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a /*; textarea.ckeditor*/ {color:#000;}
+details summary {color:#005ea5;}
+details summary:hover {color:#2e8aca;}
+
+/*textarea.ckeditor,*/ .navbar-inner, ul.ui-autocomplete {background-color:#fff;}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {background-color:#ffbf47;}
+
+a.add-action {display:block; margin:10px;}
+
+.add-link:before {content:url('../Images/icon_plus.png'); position:relative; top:10px; right:5px;}
+.add-link {display:block; margin-right:10px;}
+.add-link:focus {outline:none; background-color:#fff;}
+
+.edit-link:before {content:url('../Images/icon_edit_team.png'); position:relative; top:5px; right:5px;}
+.edit-link {display:block;}
+section a.edit-link, section a.add-link, detail a.edit-link, detail a.add-link {margin:15px 0px 15px 30px;}
+
+.add-link:focus, .edit-link:focus {outline:none; background-color:#fff;}
+
+section>.row:nth-child(even), #case-list tbody tr:hover {background-color:#eee;}
+
+#dropdown-items-list>li {border-bottom: 1px solid #BFC1C3;}
+
+.login-bar {text-align:right; padding:0.5em 1em; background:#dee0e2;}
+
+a {text-decoration:none;}
+.button-secondary {margin:5px 0px;}
+.indent {margin-left:15px;}
+#global-header-bar .header-bar {height:0;}
+ul li, ol li {margin-bottom:0;}
+
+details.open span, details.open table, details.open h3, .field-validation-error, .navbar-inner span, #option-bar, .form-control, .ui-helper-hidden-accessible, label, details.open > div, ul.ui-autocomplete {display:block;}
+
+.field-validation-error {border-left:4px solid #df3034; line-height:25px; margin:30px 0 0 0; padding:10px 0px 15px 10px;}
+
+.navbar-inner {border-color:#fff #fff #bfc1c3 #fff; border-radius:0; background-image:none; box-shadow:none;}
+.navbar-inner span {float:right; padding:10px 15px;}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a {background-image:none;}
+
+#dropdown-types li {width:50%;}
+#dropdown-types span {width:25%; display:inline-block;}
+
+.breadcrumbs {margin-top:1em; margin-bottom:-9px;}
+.breadcrumbs ol li {display:inline-block;}
+.breadcrumbs ol li::after {content:' > ';}
+.breadcrumbs ol li:last-child:after{content:'';}
+
+#dropdown-items-list li {width:100%; line-height:1.5em; display:block;}
+#dropdown-items-list li span {display:inline-block; width:85%;}
+#dropdown-items-list li span input {margin-right: 1em;}
+#dropdown-items-list li a {display:inline-block; width:64px;}
+
+#option-bar {width:100%; margin:15px 0;}
+#option-bar li, h2, a{display:inline-block;}
+
+table#case-list {border-collapse:collapse;}
+
+.ui-datepicker-trigger {}
+
+.row {margin-left:0;}
+.field-validation-error {font-size:16px; line-height:1.25; font-weight:300; text-transform:none;}
+
+legend {font-weight:bold; margin-bottom:5px;}
+
+.ui-tabs .ui-tabs-nav {padding-bottom:0.2em;} 
+
+.button {margin:15px 0;}
+label {margin-bottom:3px;}
+table {margin-bottom:16px;}
+#case-list th {text-align:center; vertical-align:middle;}
+
+div.form-group.block-label, div.form-group.block-label label {display:inline-block;}
+div.form-group select {line-height:25px; font-size:19px; font-weight:normal;}
+
+input.textbox.dp {margin-right:10px;}
+#reports ul li {margin-left:15px;}
+#phases table {margin-bottom:15px;}
+#phases td {text-align:center;}
+
+details {margin:15px 0;}
+details > div, details span, details table, details h3 {display:none;}
+details.open > div {margin-top:15px;}
+
+details summary:focus {outline-style:none;}
+
+.detail {padding:15px;}
+section, .detail {border-bottom:1px solid #6f777b;}
+.last {margin-bottom:15px;}
+
+ul.ui-autocomplete {border:4px solid #ffbf47; padding:0.2em 0; width:206px;}
+
+/* CKEDITOR */
+.cke_voice_label {display:none !important;}
